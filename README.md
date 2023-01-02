@@ -4,4 +4,4 @@
 without having to use multiple tools and programming languages, just C++.</p>
 
 <p>Another goal of this project is to allow the distribution of work within a
-computer cluster to be distributed evenly throughout.</p>
+computer cluster to be distributed efficiently.</p>
