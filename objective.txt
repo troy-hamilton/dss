@@ -1,0 +1,30 @@
+the objective for this project is to create a way of building websites
+without having to use multiple tools and programming languages, just C++.
+
+this project will be split into classes.
+
+Here is a rough outline of how the server will work.
+
+	// setup an actual file descriptor
+	socket()
+	bind()
+	listen()
+
+	// accept clients
+	accept() // run in a loop and give the new file descriptor to a function
+
+	read()
+	parse
+	determine program flow
+	form a response, or terminate connection or call read() again.
+	write()
+	close() or go to the read step again.
+	
+Everything done in between read and write will be up to the actual
+web designers. That is where they will have the website features.
+
+Everything described above, except for determining program flow and
+forming a response can be integrated as a standard portion of the project.
+
+It will be up to the website designers to learn how the standard features
+are used, which should be made easy due to good quality documentation.
