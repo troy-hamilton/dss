@@ -5,6 +5,7 @@ void step(int client)
     int retval = dynaread(client, 8192, &raw);
     if(retval == -1)
     {
+        printError("dynaread", __FILE__, __LINE__);
         cleanup(raw);
         cleanup(client);
         return;

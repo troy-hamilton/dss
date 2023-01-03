@@ -5,7 +5,7 @@ int main()
     int serverSocket = makeTcpListenerSocket(1024);
     if(serverSocket == -1)
     {
-        printError("serverSocket", __FILE__, __LINE__);
+        printError("makeTcpListenerSocket", __FILE__, __LINE__);
         return -1;
     }
     
