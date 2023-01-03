@@ -7,9 +7,9 @@
 #include <sys/ioctl.h>
 #include <iostream>
 
+#include "metabuf.hpp"
 #include "putne.hpp"
 #include "putne.cpp"
-#include "metabuf.hpp"
 #include "dynaread.hpp"
 #include "dynaread.cpp"
 #include "sequential_search.hpp"

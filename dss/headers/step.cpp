@@ -11,7 +11,13 @@ void step(int client)
         return;
     }
     
-    //printf("%s\n", raw.start);
+    struct httpmap map;
+    
+    parseHttp(raw, map);
+    
+    std::cout << "map.method{" << map.method << '}' << std::endl;
+    putne(map.url);
+    
     cleanup(raw);
     cleanup(client);
 }

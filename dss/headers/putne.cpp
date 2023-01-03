@@ -7,3 +7,14 @@ void putne(const T *start, const N length)
     }
     std::cout << std::endl;
 }
+
+void putne(metabuf &infoBuf)
+{
+    char *p = (char*)infoBuf.start;
+    for(long i = 0; i < infoBuf.length; i++)
+    {
+        std::cout << *p;
+        p++;
+    }
+    std::cout << std::endl;
+}
