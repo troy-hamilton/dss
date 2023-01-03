@@ -4,7 +4,7 @@ int dynaread(int fd, const long max, struct metabuf *infobuf)
         *buffer, *temp_pointer;
     ssize_t 
         bytes_read = 0, total_bytes = 0, PAGE_SIZE, page_increments, 
-		size_after_realloc;
+        size_after_realloc;
     
     (*infobuf).length = 0; // initial setup
     (*infobuf).start = NULL; // initial setup
