@@ -35,3 +35,63 @@ const T* findTermAddress(const T bucket[], const T term[], const N bucketlen, co
     
     return address;
 }
+
+/*
+template <typename T, typename N>
+bool findNestedTerm(const T bucket[], const T start[], const T delim[], const N bucketlen,
+    const N startlen, const N delimlen, struct metabuf &infoBuf)
+{
+    N frontIndex = findTermIndex(bucket, start, bucketlen, startlen);
+    if(frontIndex == -1)
+        return false;
+    
+    frontIndex += startlen;
+    
+    N backIndex = findTermIndex(&bucket[frontIndex], delim, bucketlen - frontIndex, 
+        delimlen);
+    if(backIndex == -1)
+        return false;
+    
+    backIndex += frontIndex;
+
+    infoBuf.start = (unsigned char*)&bucket[frontIndex];
+    infoBuf.length = backIndex - frontIndex;
+
+    return true;
+}
+*/
+
+bool findNestedTerm(struct metabuf &raw, const char* front, const char* back, struct metabuf &mid)
+{
+    char *bucket;
+    int bucketlen;
+    
+    char *foundMid;
+    int midlen;
+    
+    bucket = (char*)raw.start;
+    bucketlen = (int)raw.length;
+    
+    //find front index
+    int frontIndex = findTermIndex(bucket, front, bucketlen, (int)strlen(front));
+    if(frontIndex == -1)
+        return false;
+    
+    frontIndex += (int)strlen(front);
+    
+    
+    int backIndex = findTermIndex(&bucket[frontIndex], back, bucketlen - frontIndex, (int)strlen(back));
+    if(backIndex == -1)
+        return false;
+    
+    backIndex += frontIndex;
+
+    midlen = backIndex - frontIndex;
+    
+    foundMid = &bucket[frontIndex];
+    
+    mid.start = (unsigned char*)foundMid;
+    mid.length = (int)midlen;
+
+    return true;
+}

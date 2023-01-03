@@ -11,13 +11,7 @@ void step(int client)
         return;
     }
     
-    printf("%s\n", (char*)raw.start);
-    
-    const char*
-        reply = "HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\n\r\nHello";
-        
-    retval = write(client, reply, strlen(reply));
-    
+    //printf("%s\n", raw.start);
     cleanup(raw);
     cleanup(client);
 }

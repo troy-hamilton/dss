@@ -4,7 +4,11 @@
 #include <sys/socket.h> //socket bind listen accept
 #include <cstring>
 #include <cstdio>
+#include <sys/ioctl.h>
+#include <iostream>
 
+#include "putne.hpp"
+#include "putne.cpp"
 #include "metabuf.hpp"
 #include "dynaread.hpp"
 #include "dynaread.cpp"
@@ -16,5 +20,8 @@
 #include "tcp_sockets.cpp"
 #include "cleanup.hpp"
 #include "cleanup.cpp"
+#include "httpmap.hpp"
+#include "http_parsing.hpp"
+#include "http_parsing.cpp"
 
 #include "step.cpp"

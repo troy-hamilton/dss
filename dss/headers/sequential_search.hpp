@@ -32,3 +32,10 @@ const T* findTermAddress(const T bucket[], const T term[], const N bucketlen,
     
     returns nullptr if the term was not found.
 */
+
+bool findNestedTerm(struct metabuf &raw, const char* front, 
+    const char* back, struct metabuf &mid);
+/*
+    searches raw for a term in between front and back, then
+    writes its info into mid.
+*/

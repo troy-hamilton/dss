@@ -37,3 +37,10 @@ int makeTcpListenerSocket(unsigned short portNumber)
     
     return serverSocket;
 }
+
+int checkForPendingBytes(int fd)
+{
+    int bytesPending;
+    ioctl(fd, FIONREAD, &bytesPending);
+    return bytesPending;
+}
