@@ -10,6 +10,12 @@ void putne(const T *start, const N length)
 
 void putne(metabuf &infoBuf)
 {
+    if(infoBuf.length == 0)
+    {
+        std::cout << "0 Length Sequence Detected" << std::endl;
+        return;
+    }
+    
     char *p = (char*)infoBuf.start;
     for(long i = 0; i < infoBuf.length; i++)
     {

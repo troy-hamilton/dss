@@ -13,10 +13,9 @@ void step(int client)
     
     struct httpmap map;
     
-    parseHttp(raw, map);
+    parseHttp(raw, map); // inscribes http message information into map
     
-    std::cout << "map.method{" << map.method << '}' << std::endl;
-    putne(map.url);
+    flowpath(client, map);
     
     cleanup(raw);
     cleanup(client);

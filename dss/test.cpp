@@ -1,19 +1,18 @@
 #include "headers/all.hpp"
 
-// currently testing parseHttp
-// void parseHttp(struct metabuf &raw, struct httpmap &map)
+// currently testing formHttpHeaders(struct httpHeaders &specs, struct metabuf &headerBuf)
+
 int main()
 {
-    const char * httpmsg = "POST /troy HTTP/1.1";
-    struct metabuf raw;
-    raw.start = (unsigned char*)httpmsg;
-    raw.length = strlen((char*)raw.start);
-    struct httpmap map;
+    struct httpHeaders specs;
+    specs.statusCode = 200;
+    specs.contentType = text_html;
+    specs.contentLength = 999;
     
-    parseHttp(raw, map);
+    struct metabuf headers;
     
-    std::cout << "map.method == " << map.method << std::endl;
-    std::cout << "map.url == ";
-    putne((char*)map.url.start, map.url.length);
+    formHttpHeaders(specs, headers);
+    
+    putne(headers);
     
 }

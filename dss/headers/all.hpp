@@ -6,6 +6,7 @@
 #include <cstdio>
 #include <sys/ioctl.h>
 #include <iostream>
+#include <sys/stat.h>
 
 #include "metabuf.hpp"
 #include "putne.hpp"
@@ -23,5 +24,8 @@
 #include "httpmap.hpp"
 #include "http_parsing.hpp"
 #include "http_parsing.cpp"
+#include "disk_to_memory.hpp"
+#include "disk_to_memory.cpp"
 
+#include "flowpath.cpp"
 #include "step.cpp"
