@@ -17,7 +17,7 @@ int main()
             printError("accept", __FILE__, __LINE__);
             continue;
         }
-        
+        std::cout << "prestep" << std::endl;
         step(clientSocket);
     }
 }

@@ -1,0 +1,18 @@
+essentially, all of the tcp things occur,
+the client message is received into a buffer.
+
+The format for buffers in this program is called
+metabuf. The struct looks like this.
+struct metabuf
+{
+    void * start;
+    long length;
+};
+
+Some tcp stuff happens, then step() is called,
+then step receives a message from a client, thenthe message is sent 
+to httpmap() where its http heades get mapped out.
+
+The mapped out headers get passed to flowpath() where a series
+of conditions get checked, and based on those conditions, a feature
+will happen. 

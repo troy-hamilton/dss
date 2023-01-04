@@ -10,7 +10,7 @@ void step(int client)
         cleanup(client);
         return;
     }
-    
+    std::cout << (char*)raw.start << std::endl;
     struct httpmap map;
     
     parseHttp(raw, map); // inscribes http message information into map

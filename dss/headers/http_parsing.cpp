@@ -7,5 +7,5 @@ void parseHttp(struct metabuf &raw, struct httpmap &map)
     else
         map.method = unknown;
     
-    findNestedTerm(raw, " /", " H", map.url);
+    findNestedTerm(raw, " /", " H", map.url); // finds the url
 }
