@@ -18,5 +18,6 @@ void step(int client)
     flowpath(client, map);
     
     cleanup(raw);
-    cleanup(client);
+    close(client);
 }
+

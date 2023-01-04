@@ -9,6 +9,7 @@
 #include <sys/stat.h>
 
 #include "metabuf.hpp"
+#include "http_structs_and_enums.hpp"
 #include "putne.hpp"
 #include "putne.cpp"
 #include "dynaread.hpp"
@@ -21,11 +22,11 @@
 #include "tcp_sockets.cpp"
 #include "cleanup.hpp"
 #include "cleanup.cpp"
-#include "httpmap.hpp"
 #include "http_parsing.hpp"
 #include "http_parsing.cpp"
 #include "disk_to_memory.hpp"
 #include "disk_to_memory.cpp"
-
+#include "formHttpHeaders.cpp"
+#include "../cliq/cliqs.hpp"
 #include "flowpath.cpp"
 #include "step.cpp"
