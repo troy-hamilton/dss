@@ -63,3 +63,5 @@ and more importantly, allows for those low level procedures to be easily
 abstracted away and turned into efficient assembly code. C++ has many features,
 many of which are never used by developers, however when they are used, they
 can be guaranteed to generate the most efficient assembly possible.
+
+this program will be lazily produced for a while.
